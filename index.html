@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея художника | Иван Петров</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ARLECCHINO</h2>
+                <span>死にたい。.</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Main</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>What am I?</h1>
+            <p>彼らは退屈していますが、私は生きることを恥じています、私は私の口を閉じて縫いたいです。
+アルバムがリリースされるたびに、この憂鬱なサーカスが始まります。
+彼女は私の近くに来ない方が良いでしょう。
+神よ、私はなんて恥ずべきことだったのでしょう。
+一日前、一年前、そしてmp3のすべて
+たとえそれがクレチンの魂であっても、他の誰かの魂の反射に縛られています
+なぜ1000のうち1つの否定的なコメントが記憶されているのですか？
+それは何ですか？ 他の人の視線の下で自分と会う？</p>
+            <button class="cta-button" onclick="scrollToGallery()">View works</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://i.pinimg.com/736x/f6/9f/db/f69fdbf8e94b4da9ce067349596be89b.jpg" alt="人生の意味は何ですか？">
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">My inner world..</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All works</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About me</h2>
+                    <p>白い蛾のサンバ
+開いた光によって
+薄い翼のように
+焦らないでください！
+
+少しは良いですが、憧れはありません
+白い蛾のように生きる
+そして、自分の近くに飛ぶ
+地球から</p>
+                    <p>よく生きることは絶対に必要です
+心に甘いものを選ぶ
+彼は彼女をあまり傷つけませんでしたが、彼は彼女を燃やしました。
+そして彼女は長くは続かなかったが、彼女は愛していた
+一般的に、それは簡単ではありませんでした
+蛾と炎の友情</p>
+                    <div class="skills">
+                        <div class="skill">
+                            <span>Reliability</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 99%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>Quality</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 99%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>Execution speed</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.pinimg.com/736x/e8/e8/ab/e8e8abd99743f69a005c47f4d643b9b5.jpg" alt="人生の意味は何ですか？">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact with me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>kuryleva30@bk.ru</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Social network:</h3>
+                        <div class="social-links">
+                            <a href="#">Vkontakte</a>
+                            <a href="#">Telegram</a>
+                            <a href="#">Tik Tok</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Atelier</h3>
+                        <p>The address is temporarily unavailable.</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <textarea placeholder="Text" rows="5" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ARLECCHINO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для картин -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <p class="modal-size" id="modalSize"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
